@@ -451,10 +451,16 @@ body {
     }
     .banner__btn-link button{
         width: 100%;
-        padding: 20px 45px;
+        padding: 17px 45px;
     }
     .banner__content-left{
         gap: 0;
+    }
+    .header__container{
+        padding: 25px 15px;
+    }
+    .banner__title{
+        line-height: 95%;
     }
 }
 
