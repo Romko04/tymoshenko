@@ -1,11 +1,12 @@
 const menuBody = document.querySelector('.menu__body');
 // Event listeners
 document.addEventListener('click', (e) => {
-    e.preventDefault()
     if (e.target.classList.contains('anchor')) {
+        e.preventDefault()
         anchorClick(e.target)
     }
     if (e.target.classList.contains('header__burger')) {
+        e.preventDefault()
         toggleMenu()
     }
 })

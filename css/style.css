@@ -86,19 +86,24 @@ body {
 }
 
 .title {
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Montserrat;
-    font-size: 45px;
+    color: #000;
+    font-family: Cormorant Garamond;
+    font-size: clamp(36px, 5vw, 48px);
+    position: relative;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: normal;
-    background: var(--color-title);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: inline-block;
 }
-
+.title::after{
+    content: '';
+    ;position: absolute;
+    left: -3px;
+    right: -3px;
+    height: 3px;
+    bottom: 0;
+    background-color: #FC649F;
+}
 
 .wrapper {
     position: relative;
@@ -164,7 +169,6 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
-    z-index: 2;
 }
 
 .wrapper {
@@ -276,7 +280,7 @@ body {
 .banner__title {
     color: #000;
     font-family: Cormorant Garamond;
-    font-size: clamp(43px, 5vw, 66px);
+    font-size: clamp(43px, 5vw, 55px);
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -302,7 +306,145 @@ body {
     text-align: right;
 }
 
-/*  */
+
+
+
+
+
+
+
+
+/*about*/
+
+
+.about{
+    background-color: #fff;
+
+}
+.about__container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    display: flex;
+}
+.about__content-left {
+    width: 39%;
+}
+.about__content-img {
+    width: 66%;
+}
+.about__content-right {
+    width: 60%;
+}
+.about__title {
+    margin-bottom: 60px;
+}
+.about__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.about__list-item {
+    color: #000;
+    font-family: Montserrat;
+    font-size: clamp(18px, 5vw, 23px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    padding-left: 40px;
+}
+.about__list-item::before{
+    content: '';
+    background-image: url('../img/about/bant.svg');
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.about__inst {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Montserrat;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 15px;
+    position: relative;
+    bottom: -9px;
+}
+
+/*Footer*/
+
+
+
+
+
+
+.footer {
+    background-color: #FC649F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 26px;
+    gap: 10px;
+    color: #fff;
+}
+.footer .social__link .social__img{
+    fill: #ffff;
+}
+.footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.footer__content-item{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.footer__link {
+    position: relative;
+    color: #FFF;
+font-family: Montserrat;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.footer__link::after {
+    content: '';
+    height: 2px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    bottom: 0;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* media */
 @media (max-width: 991.98px) {}
 
 @media (max-width: 798px) {
@@ -446,6 +588,9 @@ body {
     .socials {
         margin-right: auto;
     }
+    .footer .socials{
+        margin: 0;
+    }
     .banner__btn-link {
         margin: 0 15px;
     }
@@ -461,6 +606,33 @@ body {
     }
     .banner__title{
         line-height: 95%;
+    }
+
+
+
+    .about__container{
+        flex-direction: column;
+    }
+    .about__content-left, .about__content-right{
+        width: 100%;
+    }
+    .about__content-img{
+        position: relative;
+        left: -15px;
+        width: 82%;
+    }
+    .about__container{
+        padding-top: 0;
+    }
+    .about__title-wrapper{
+        text-align: center;
+        margin: 65px 0;
+    }
+    .about__title{
+        margin: 0;
+    }
+    .about__list-item::before{
+        left: 15px;
     }
 }
 
