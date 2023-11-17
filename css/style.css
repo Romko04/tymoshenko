@@ -591,6 +591,10 @@ line-height: normal;
     .footer .socials{
         margin: 0;
     }
+    .banner__content-img{
+        position: relative;
+        bottom: -2px;
+    }
     .banner__btn-link {
         margin: 0 15px;
     }
