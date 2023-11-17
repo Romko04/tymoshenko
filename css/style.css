@@ -429,8 +429,8 @@ body {
     }
     .banner__title {
         text-align: center;
-    margin: 35px 15px;
-    margin-bottom: 55px;
+        margin: 18px 15px;
+        margin-bottom: 18px;
     }
     .banner__content-left,
     .banner__content-right {
@@ -455,9 +455,6 @@ body {
     }
     .banner__content-left{
         gap: 0;
-    }
-    .banner__container{
-        padding-top: 45px;
     }
 }
 
