@@ -410,6 +410,10 @@ body {
     justify-content: space-between;
     gap: 20px;
     box-sizing: border-box;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 22.1px -2px #FC649F;
+    padding: 20px;
 }
 .courses__btn {
     align-self: flex-end; /* Розміщуємо кнопку внизу */
