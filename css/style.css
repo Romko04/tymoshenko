@@ -323,7 +323,7 @@ body {
 }
 .about__container {
     padding-top: 75px;
-    padding-bottom: 75px;
+    padding-bottom: 30px;
     display: flex;
 }
 .about__content-left {
@@ -377,6 +377,134 @@ body {
     position: relative;
     bottom: -9px;
 }
+
+
+/*Courses*/
+/* .courses {
+}
+.container {
+} */
+.courses__container {
+    display: flex;
+}
+.title__wrapper{
+    text-align: center;
+    margin: 75px 0;
+}
+
+
+.courses__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    gap: clamp(100px, 5vw, 150px);
+}
+
+
+.courses__list-item {
+    flex: 0 0 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.courses__btn {
+    align-self: flex-end; /* Розміщуємо кнопку внизу */
+    margin-top: 10px;
+}
+.courses__list-item img{
+    border-radius: 10px;
+    border: 3px solid #E84483;
+    /* background: lightgray -0.03px -228.078px / 100.012% 144.466% no-repeat; */
+    box-shadow: 1px 1px 22px -1px #FC649F;
+}
+
+.courses__text {
+    color: #000;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+opacity: .6;
+}
+.courses__link {
+    color: #000;
+
+    display: inline-block;
+    margin-left: auto;
+    cursor: pointer;
+    color: #E84483;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    background-color: transparent;
+}
+.courses__title-link{
+    color: #000;
+text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Montserrat;
+font-size: 26px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.courses__btn {
+    color: #E84483;
+text-align: right;
+font-family: Montserrat;
+font-size: 27px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border: none;
+background-color: transparent;
+margin-left: auto;
+}
+
+
+
+
+/*consultation*/
+
+.consultation__container {
+    display: flex;
+}
+.title__wrapper {
+}
+.title {
+}
+.cases__title {
+}
+.title__shine-left {
+}
+.consultation__content-left {
+}
+.consultation__form {
+}
+.consultation__form-title {
+}
+.consultation__form-input {
+}
+.consultation__text {
+}
+.consultation__btn {
+}
+.consultation__content-right {
+}
+
+
+
+
+
+
 
 /*Footer*/
 
@@ -559,12 +687,6 @@ line-height: normal;
         max-width: 100%;
     }
 
-
-
-
-
-
-
     .banner__container {
         flex-direction: column-reverse;
         padding: 0;
@@ -638,6 +760,15 @@ line-height: normal;
     .about__list-item::before{
         left: 15px;
     }
+
+
+    .courses__list{
+        flex-direction: column;
+    }
+    .courses__list-item{
+        width: 100%;
+        gap: 20px;
+    }
 }
 
 @media (min-width: 1525px) {
@@ -646,8 +777,6 @@ line-height: normal;
     }
      
 }
-
-/* 
     .banner__title {
         font-size: 46px;
     }
