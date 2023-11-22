@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alina Tymoshenko</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container container">
+                <nav class="header__menu">
+                    <nav class="menu__body">
+                        <ul class="header__menu-items">
+                            <li class="header__menu-item"><a class="header__menu-link menu__link-active "
+                                    href="/">Головна</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link menu__link-active anchor"
+                                    href="#about">Кому підійде?</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link anchor" href="#services">Що
+                                    отримаєш?</a>
+                            </li>
+                            <li class="header__menu-item"><a class="header__menu-link anchor" href="#blog">Програма</a>
+                            </li>
+                            <li class="header__menu-item"><a class="header__menu-link anchor" href="#team">Тарифи</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </nav>
+                <ul class="socials">
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <svg class="social__img" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.9932 1.58221C15.0223 1.40736 14.9567 1.23016 14.8208 1.11645C14.6848 1.00274 14.4988 0.969519 14.3318 1.02914L0.331836 6.02914C0.143209 6.0965 0.0129867 6.26994 0.000913704 6.46987C-0.0111592 6.6698 0.0972469 6.85765 0.276398 6.94722L4.2764 8.94722C4.43688 9.02746 4.62806 9.01556 4.77735 8.91603L8.09775 6.70244L6.10957 9.18766C6.02203 9.29709 5.98442 9.43824 6.00592 9.57672C6.02742 9.7152 6.10605 9.8383 6.22265 9.91603L12.2227 13.916C12.3638 14.0101 12.5431 14.0262 12.6988 13.9588C12.8545 13.8914 12.9653 13.7496 12.9932 13.5822L14.9932 1.58221Z" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <svg class="social__img" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" />
+                                <path
+                                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <button class="header__burger"><span></span></button>
+
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="who">
+                <div class="title__wrapper">
+                    <span>КУРС</span>
+                    <h1 class="who__title">«КЛІЄНТИ З ІНСТАГРАМ»</h1>
+                </div>
+                <div class="container who__container">
+                    <div class="who__content-left">
+                        <img class="who__content-left__img" src="./img/course/who/main-min.jpg" alt=""
+                            class="who__content-left-img">
+                    </div>
+                    <div class="who__content-right">
+                        <h2 class="title__course">Курс підходить для майстрів і студій:</h2>
+                        <ul class="who__list">
+                            <li class="who__list-item">
+                                у яких проблеми з кількістю клієнтів
+                            </li>
+                            <li class="who__list-item">
+                                хто хоче закривати вільні віконця і
+                                робити повний запис
+                            </li>
+                            <li class="who__list-item">
+                                хто хоче заробляти більше
+
+                            </li>
+                            <li class="who__list-item">
+                                до кого клієнт приходить 1 раз і не повертається
+
+                            </li>
+                            <li class="who__list-item">
+                                які не розуміють як правильно вести Інстаграм і продавати
+                                свої послуги
+                            </li>
+                            <li class="who__list-item">
+                                для тих хто тільки починає
+                                розвиватися в б’ють індустрії
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="result">
+                <div class="title__wrapper">
+                    <h2 class="title__course">Після курсу ти:</h2>
+                </div>
+                <div class="container result__container">
+                    <div class="result__content-left">
+                        <ul class="result__list">
+                            <li class="result__list-item">
+                                Напрацюєш базу клієнтів
+                            </li>
+                            <li class="result__list-item">
+                                Твоя сторінка буде продавати
+                                без реклами
+                            </li>
+                            <li class="result__list-item">
+                                Зможеш закривати пусті віконця
+
+                            </li>
+                            <li class="result__list-item">
+                                Заробляти більше
+
+                            </li>
+                            <li class="result__list-item">
+                                Будеш замотивована на роботу та
+                                результат
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="result__content-right">
+                        <img class="result__content-right__img" src="./img/course/who/two-min.jpg" alt=""
+                            class="result__content-left-img">
+                    </div>
+                </div>
+            </section>
+            <section class="moduls">
+                <div class="container moduls__container">
+                    <div class="title__wrapper">
+                        <h2 class="title moduls__title">Програма курсу на</h2>
+                    </div>
+                    <div class="moduls__accordeon">
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">0</span>
+                                вступний модуль </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                0.1</span><span class="modul__list-item__value">Як буде проходити курс.
+                                                Як взяти з навчання максимум</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                0.2</span><span class="modul__list-item__value">Як все встигати.
+                                                Тайм-менеджемент</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                0.3</span><span class="modul__list-item__value">Чому важливо ставити
+                                                цілі. Як робити це правильно</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                0.4</span><span class="modul__list-item__value">Чи готовий ваш Instagram
+                                                до масштабування</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                0.5</span><span class="modul__list-item__value">Сегментація аудиторії.
+                                                Аналіз цільової аудиторії</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                0.6</span><span class="modul__list-item__value">Аналіз
+                                                конкурентів</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Таблиця для декомпозиції
+                                                    цілі</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Інструкція створення
+                                                    бізнес-сторінки Facebook</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Табличка аналізу
+                                                    конкурентів</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 4</span><span
+                                                    class="boneses__list-item__value">Приклад аналізу конкурентів</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 5</span><span
+                                                    class="boneses__list-item__value">Табличка аналізу цільової
+                                                    аудиторії</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 6</span><span
+                                                    class="boneses__list-item__value">Приклад аналізу цільової
+                                                    аудиторії</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви чітко визначите, чого хочете і як будете
+                                            досягати цього. Ви визначите і вивчите свою цільову аудиторію та
+                                            конкурентів, виділите їхні болі й бажання та чим зможете тригерити в
+                                            продажах.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">1</span>
+                                Основи розвитку особистого бренду </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.1</span><span class="modul__list-item__value">Що таке особистий бренд,
+                                                і що він вам дасть</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.2</span><span class="modul__list-item__value">Розпаковка особистості
+                                                та лайфу</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.3</span><span class="modul__list-item__value">Ропаковка
+                                                експертності</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.4</span><span class="modul__list-item__value">Матриця та
+                                                контент-план</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.5</span><span class="modul__list-item__value">Як закладати
+                                                сенси</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.6</span><span class="modul__list-item__value">Як писати сценарії
+                                                контенту</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                1.7</span><span class="modul__list-item__value">Яких помилок не
+                                                припускатися під час побудови особистого бренду</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Розбір контент-плану</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Таблиця для розпаковки особистості
+                                                    та лайфу</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Таблиця для розпаковки
+                                                    експертності</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 4</span><span
+                                                    class="boneses__list-item__value">Таблиця для матриці та
+                                                    контент-плану</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 5</span><span
+                                                    class="boneses__list-item__value">Як працювати в Notion</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 6</span><span
+                                                    class="boneses__list-item__value">Застосування розпаковки та
+                                                    матриці</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви визначитеся, як будете будувати особистий
+                                            бренд, що транслювати, коли і як. Як закладати в контент сенси, що будуть
+                                            прогрівати аудиторію до покупки.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">2</span>
+                                Плейсменти Instagram </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                2.1</span><span class="modul__list-item__value">Reels, як метод
+                                                просування. Теорія</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                2.2</span><span class="modul__list-item__value">Сторітелінг, як метод
+                                                продажів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                2.3</span><span class="modul__list-item__value">Оформлення сторіс</span>
+                                        </li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Уроr
+                                                2.4</span><span class="modul__list-item__value">Створення візуальної
+                                                концепції</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                2.5</span><span class="modul__list-item__value">Створенню контенту у
+                                                Figma</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Приклади форматів сторіс</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Робота з ChatGPT</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Як створювати лід-магніт</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 4</span><span
+                                                    class="boneses__list-item__value">50 ідей для сторітелінгу</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 5</span><span
+                                                    class="boneses__list-item__value">Чек-ліст інструментів для
+                                                    Instagram</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 6</span><span
+                                                    class="boneses__list-item__value">Професійний монтаж відео</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ми навчимося технічно створювати контент, який
+                                            приваблюватиме ЦА, навчимося полегшувати роботу за допомогою сторонніх
+                                            сервісів.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">3</span>
+                                Продажі </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.1</span><span class="modul__list-item__value">Продуктова
+                                                лінійка</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.2</span><span class="modul__list-item__value">Психологія
+                                                продажів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.3</span><span class="modul__list-item__value">Що таке прогрів. Етапи
+                                                прогрівів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.4</span><span class="modul__list-item__value">Тригери</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.5</span><span class="modul__list-item__value">Інфоприводи, як метод
+                                                підняти охоплення</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.6</span><span class="modul__list-item__value">Продажі через
+                                                сторіс</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.7</span><span class="modul__list-item__value">Як опрацювати
+                                                заперечення</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.8</span><span class="modul__list-item__value">Система SPIN. Продажі
+                                                через запитання</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                3.9</span><span class="modul__list-item__value">Продажі через
+                                                зідзвон</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 1</span><span
+                                                    class="boneses__list-item__value">Шаблон короткого прогріву</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 2</span><span
+                                                    class="boneses__list-item__value">Шаблон довгого прогріву</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 3</span><span
+                                                    class="boneses__list-item__value">Симуляція продажів через
+                                                    зідзвон</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви навчитеся продавати свої послуги через різні
+                                            плейсменти, не зливати клієнтів і наперед опрацьовувати заперечення.
+                                            Використовувати в контенті тригери, які пришвидшують покупку.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">4</span>
+                                Воронки продажів у блозі й не тільки </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.1</span><span class="modul__list-item__value">Що таке воронки
+                                                продажів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.2</span><span class="modul__list-item__value">Контентні воронки
+                                                продажів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.3</span><span class="modul__list-item__value">Воронки продажів через
+                                                TikTok</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.4</span><span class="modul__list-item__value">Воронки продажів через
+                                                Telegram</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.5</span><span class="modul__list-item__value">Воронка продажів через
+                                                анкету</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.6</span><span class="modul__list-item__value">Воронка продажів через
+                                                безплатник</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.7</span><span class="modul__list-item__value">Воронки продажів через
+                                                автовебінар на холодну аудиторію</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.8</span><span class="modul__list-item__value">Автоворонка через
+                                                чат-бота</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                4.9</span><span class="modul__list-item__value">Зашиття воронок</span>
+                                        </li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 1</span><span
+                                                    class="boneses__list-item__value">Шаблон анкети передзапису</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 2</span><span
+                                                    class="boneses__list-item__value">Алгоритм підготовки
+                                                    безплатника</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 3</span><span
+                                                    class="boneses__list-item__value">Створення чат-бота в
+                                                    Instagram</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 4</span><span
+                                                    class="boneses__list-item__value">Шпаргалка схем воронок</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">Бонус 5</span><span
+                                                    class="boneses__list-item__value">Структура створення холодної
+                                                    воронки</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви побудуєте стратегію системних продажів без
+                                            виходу в сторіс. Побудуєте схеми контентних воронок. Створите свого
+                                            чат-бота.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">5</span>
+                                Набір аудиторії. Поглиблення в різні методи просування </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                5.1</span><span class="modul__list-item__value">Шляхи залученння
+                                                трафіку</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                5.2</span><span class="modul__list-item__value">Колаборації</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                5.3</span><span class="modul__list-item__value">Вірусний контент</span>
+                                        </li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                5.4</span><span class="modul__list-item__value">Реклама в
+                                                блогерів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                5.5</span><span class="modul__list-item__value">Проявленість
+                                                офлайн</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Схема написання технічного
+                                                    завдання</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Відеопрактикум із проведення
+                                                    розіграшів</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Таблиця для аналізу
+                                                    блогерів</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 4</span><span
+                                                    class="boneses__list-item__value">Ефір із роботи з блогерами</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 5</span><span
+                                                    class="boneses__list-item__value">Організація заходу</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви навчитеся набирати аудиторію в різні способи.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">6</span>
+                                Таргет – ще більш простими словами </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.1</span><span class="modul__list-item__value">Перші кроки до
+                                                налаштування реклами. Кнопка чи кабінет</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.2</span><span class="modul__list-item__value">Вивчення
+                                                інструментів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.3</span><span class="modul__list-item__value">Налаштування рекламної
+                                                кампанії на трафік</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.4</span><span class="modul__list-item__value">Налаштування рекламної
+                                                кампанії на інші цілі</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.5</span><span class="modul__list-item__value">Які креативи
+                                                створювати</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.6</span><span class="modul__list-item__value">Ретаргет і схожа
+                                                аудиторія</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.7</span><span class="modul__list-item__value">Аналіз рекламного
+                                                кабінету</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                6.8</span><span class="modul__list-item__value">Стратегія для
+                                                таргету</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Додатковий урок про
+                                                    бізнес-менеджер, щоб запускати таргет іншим</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Табличка аналізу&nbsp;рекламного
+                                                    кабінету</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Створення крео</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 4</span><span
+                                                    class="boneses__list-item__value">Уникнення сплати податку</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 5</span><span
+                                                    class="boneses__list-item__value">Шпаргалка інтересів</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 6</span><span
+                                                    class="boneses__list-item__value">Робота в мобільному
+                                                    застосунку</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви вивчите всі секрети таргету й самостійно
+                                            налаштовуватимете рекламу для прямих продажів збільшення аудиторії.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">7</span>
+                                Шляхи масштабування. Делегування </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                7.1</span><span class="modul__list-item__value">Як експертам
+                                                масштабуватися</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                7.2</span><span class="modul__list-item__value">Масштаб з погляду
+                                                маркетингу</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                7.3</span><span class="modul__list-item__value">Помилки експертів в
+                                                масштабуванні</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                7.4</span><span class="modul__list-item__value">Як правильно
+                                                делегувати</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                7.5</span><span class="modul__list-item__value">Як побудувати бізнес з
+                                                командою</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                7.6</span><span class="modul__list-item__value">Контроль і довіра</span>
+                                        </li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Приклад технічного завдання</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Табличка фіксації росту бізнесу
+                                                    онлайн</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Де шукати людей в команду</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви зрозумієте, як можна масштабуватися, що і як
+                                            делегувати.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">8</span>
+                                Створення продукту </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.1</span><span class="modul__list-item__value">Тестування
+                                                гіпотез</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.2</span><span class="modul__list-item__value">Аналіз цільової
+                                                аудиторії. Касдеви</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.3</span><span class="modul__list-item__value">Формування теми й
+                                                формату продукту</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.4</span><span class="modul__list-item__value">Аналіз
+                                                конкурентів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.5</span><span class="modul__list-item__value">Методологія
+                                                навчання</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.6</span><span class="modul__list-item__value">Написання структури
+                                                навчання</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.7</span><span class="modul__list-item__value">Декомпозиція
+                                                запуску</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.8</span><span class="modul__list-item__value">Тарифна сітка та
+                                                оферта</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                8.9</span><span class="modul__list-item__value">Визначення витрат +
+                                                прорахування ризиків</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Табличка для аналізу цільової
+                                                    аудиторії</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Табличка для аналізу
+                                                    конкурентів</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 3</span><span
+                                                    class="boneses__list-item__value">Табличка для написання
+                                                    структури</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 4</span><span
+                                                    class="boneses__list-item__value">Табличка для декомпозиції
+                                                    запуску</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 5</span><span
+                                                    class="boneses__list-item__value">Табличка для витрат</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 6</span><span
+                                                    class="boneses__list-item__value">Табличка для аналізу
+                                                    готовності</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 7</span><span
+                                                    class="boneses__list-item__value">Шаблон оферти</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 8</span><span
+                                                    class="boneses__list-item__value">Як змінювати оферту</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 9</span><span
+                                                    class="boneses__list-item__value">Налаштування оплати й
+                                                    розтермінування</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви створите власний інфопродукт, який зможе
+                                            збільшити дохід.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">9</span>
+                                Стратегія запуску </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.1</span><span class="modul__list-item__value">Різновиди
+                                                запусків</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.2</span><span class="modul__list-item__value">Написання плану
+                                                запуску</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.3</span><span class="modul__list-item__value">Написання прогріву +
+                                                збирання кейсів</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.4</span><span class="modul__list-item__value">Способи масштабування
+                                                запуску</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.5</span><span class="modul__list-item__value">Робота з
+                                                кураторами</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.6</span><span class="modul__list-item__value">Аналіз запусків (власний
+                                                досвід)</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">Урок
+                                                9.7</span><span class="modul__list-item__value">Продажі продукту</span>
+                                        </li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Табличка для збору кейсів</span>
+                                            </li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Інтервю із запусків у різних
+                                                    експертів</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви визначите, яка стртаегія запуску підійде,
+                                            напишите під неї прогрів, розплануєте запуск.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon">
+                            <button class="moduls__accordeon-btn">
+                                <span class="moduls__accordeon-numb">10</span>
+                                Запуск продукту </button>
+                            <div class="panel">
+                                <div class="panel__content-top">
+                                    <ul class="modul__list">
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                10.1</span><span class="modul__list-item__value">Підготовка до створення
+                                                матеріалів продукту</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                10.2</span><span class="modul__list-item__value">Зйомки уроків</span>
+                                        </li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                10.3</span><span class="modul__list-item__value">Монтаж уроків</span>
+                                        </li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                10.4</span><span class="modul__list-item__value">Платформи для
+                                                навчання</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                10.5</span><span class="modul__list-item__value">Робота з
+                                                негативом</span></li>
+                                        <li class="modul__list-item"><span class="modul__list-item__lesson">УРОК
+                                                10.6</span><span class="modul__list-item__value">Від чого залежить
+                                                якість навчання</span></li>
+                                    </ul>
+                                    <div class="bouneses__wrapper">
+                                        <h6 class="bonuses__title">Бонуси / додаткові матеріали</h6>
+                                        <ul class="bonuses__list">
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 1</span><span
+                                                    class="boneses__list-item__value">Чек-ліст інструментів для
+                                                    записів</span></li>
+                                            <li class="boneses__list-item"><span
+                                                    class="boneses__list-item__bonuse">БОНУС 2</span><span
+                                                    class="boneses__list-item__value">Систематизація запусків</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="results__wrapper">
+                                    <h6 class="results__title">результат</h6>
+                                    <ul class="results__list">
+                                        <li class="results__list-item">Ви зберете людей на навчання, створите продукт і
+                                            отримаєте бажаний дохід.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="price">
+                <div class="title__wrapper">
+                    <h2 class="title moduls__title">Тарифи</h2>
+                </div>
+                <div class="container price__container">
+                    <ul class="price__list">
+                        <li class="price__list-item">
+                            <h3 class="price__item-title">Самостійний</h3>
+                            <ul class="price__item-result__list">
+                                <li class="price__item-result__list-item">доступ до уроків назавжди </li>
+                                <li class="price__item-result__list-item">бонусний матеріал </li>
+                            </ul>
+                            <ul class="price__item-result__list ">
+                                <li class="price__item-result__list-item price__item-result__list-item--not">доступ до уроків назавжди </li>
+                                <li class="price__item-result__list-item price__item-result__list-item--not">бонусний матеріал </li>
+                            </ul>
+                            <span class="price__value"><strong>Ціна:</strong> 2590 грн</span>
+                            <div class="price__buttons">
+                                <button class="price__button"><a href="" class="price__button-link">Придбати</a></button>
+                                <button class="price__button"><a href="" class="price__button-link">Розтермінувати</a></button>
+                                <button class="price__button"><a href="" class="price__button-link">Забронювати</a></button>
+                            </div>
+                        </li>
+                        <li class="price__list-item">
+                            <h3 class="price__item-title">Самостійний</h3>
+                            <ul class="price__item-result__list">
+                                <li class="price__item-result__list-item">доступ до уроків назавжди </li>
+                                <li class="price__item-result__list-item">бонусний матеріал </li>
+                            </ul>
+                            <ul class="price__item-result__list ">
+                                <li class="price__item-result__list-item price__item-result__list-item--not">доступ до уроків назавжди </li>
+                                <li class="price__item-result__list-item price__item-result__list-item--not">бонусний матеріал </li>
+                            </ul>
+                            <span class="price__value"><strong>Ціна:</strong> 2590 грн</span>
+                            <div class="price__buttons">
+                                <button class="price__button"><a href="" class="price__button-link">Придбати</a></button>
+                                <button class="price__button"><a href="" class="price__button-link">Розтермінувати</a></button>
+                                <button class="price__button"><a href="" class="price__button-link">Забронювати</a></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <ul class="socials">
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <svg class="social__img" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.9932 1.58221C15.0223 1.40736 14.9567 1.23016 14.8208 1.11645C14.6848 1.00274 14.4988 0.969519 14.3318 1.02914L0.331836 6.02914C0.143209 6.0965 0.0129867 6.26994 0.000913704 6.46987C-0.0111592 6.6698 0.0972469 6.85765 0.276398 6.94722L4.2764 8.94722C4.43688 9.02746 4.62806 9.01556 4.77735 8.91603L8.09775 6.70244L6.10957 9.18766C6.02203 9.29709 5.98442 9.43824 6.00592 9.57672C6.02742 9.7152 6.10605 9.8383 6.22265 9.91603L12.2227 13.916C12.3638 14.0101 12.5431 14.0262 12.6988 13.9588C12.8545 13.8914 12.9653 13.7496 12.9932 13.5822L14.9932 1.58221Z" />
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <svg class="social__img" width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" />
+                                <path
+                                    d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <span class="footer__content-item">ФОП ВАШ ФОП</span>
+                <span class="footer__content-item">ІПН: 353255252</span>
+                <a href="mailto:vashemail@gmail.com" class="footer__content-item">vashemail@gmail.com</a>
+                <a class="footer__link" target="_blank" href="./offer.html">Договір оферти</a>
+                <a class="footer__link" target="_blank" href="./confidencial.html">Політика конфіденційності</a>
+            </div>
+            <div class="modal">
+
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
