@@ -1066,13 +1066,13 @@ body {
     color: #fc649f;
 }
 
-.modul__list-item__lesson::after,
+/* .modul__list-item__lesson::after,
 .boneses__list-item__bonuse::after {
     position: absolute;
     content: url('../img/icons/accordeon/Arrow 3.svg');
     top: -1px;
     right: -16.5px;
-}
+} */
 
 .boneses__list-item__bonuse::after {
     top: 0;
