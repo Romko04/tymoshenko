@@ -725,7 +725,10 @@ body {
 .who__title {
     position: relative;
 }
-
+.who__title span{
+    color: #fc649f;
+}
+/* 
 .who__title::after {
     content: '';
     position: absolute;
@@ -734,7 +737,7 @@ body {
     height: 3px;
     bottom: 0;
     background-color: #FC649F;
-}
+} */
 
 .title__wrapper span {
     color: #E84483;
@@ -907,7 +910,7 @@ body {
     width: 100%;
     border-radius: 10px;
     background: #FC649F;
-    padding: 10px 20px;
+    padding: 15px 20px;
     cursor: pointer;
     position: relative;
     padding-right: 56px;
@@ -932,16 +935,9 @@ body {
 .moduls__accordeon-numb {
     position: relative;
     padding-right: 30px;
+    white-space: nowrap;
 }
-.moduls__accordeon-numb::after{
-    content: '';
-    position: absolute;
-    width: 2px;
-    top: 0;
-    right: 15px;
-    bottom: 0;
-    background-color: #fff;
-}
+
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover {
@@ -1263,23 +1259,6 @@ line-height: normal;
 @media (max-width: 991.98px) {
     .about__content-img {
         width: 83%;
-    }
-    .who__title::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        height: 3px;
-        bottom: 0;
-        left: 0;
-        background-color: #FC649F;
-        display: none;
-    }
-    .who .title__wrapper{
-        display: inline;
-    }
-    .who__title{
-        margin-bottom: 75px;
-        margin-top: 20px;
     }
 }
 
