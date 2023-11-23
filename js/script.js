@@ -33,3 +33,10 @@ function toggleMenu() {
   btn.classList.contains('active') ? document.body.classList.add('scroll--block') : document.body.classList.remove('scroll--block')
 }
 
+const acc = document?.querySelectorAll('.accordeon');
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+  acc[i].querySelector('.moduls__accordeon-btn').classList.toggle("active")
+  acc[i].querySelector('.panel').classList.toggle("panelActive")
+  });
+}
