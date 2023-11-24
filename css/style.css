@@ -917,6 +917,7 @@ body {
     cursor: pointer;
     position: relative;
     padding-right: 56px;
+    text-align: left;
 }
 .moduls__accordeon-btn::before {
     content: '';
