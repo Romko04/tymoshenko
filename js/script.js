@@ -13,7 +13,7 @@ document.addEventListener('click', (e) => {
 
 
 function anchorClick(e) {
-    const v = 0.6
+    const v = 0.5
     const activeAnchor = document.querySelector('.menu__link-active')
     activeAnchor.classList.remove('menu__link-active')
     e.classList.add('menu__link-active')
@@ -40,17 +40,9 @@ function anchorClick(e) {
         if (r != w + t) {
             requestAnimationFrame(step)
         } else {
-            location.hash = scrollTarget
+            location.hash = '#' + blockId;
         }
      }
-    
-
-
-    //   document.querySelector(''+ blockId).scrollIntoView({
-    //       behavior: "smooth",
-    //       block: "start",
-    //       inline: "nearest"
-    //   })
 }
 function toggleMenu() {
   const btn = document.querySelector('.header__burger');
