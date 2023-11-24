@@ -13,7 +13,7 @@ document.addEventListener('click', (e) => {
 
 
 function anchorClick(e) {
-    const v = 0.5
+    const v = 0.6
     const activeAnchor = document.querySelector('.menu__link-active')
     activeAnchor.classList.remove('menu__link-active')
     e.classList.add('menu__link-active')
