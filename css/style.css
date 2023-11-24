@@ -1460,7 +1460,7 @@ line-height: normal;
     .banner__content-left{
         display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 0;
     }
     .banner__btn-link button {
         width: 100%;
