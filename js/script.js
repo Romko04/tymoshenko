@@ -13,18 +13,44 @@ document.addEventListener('click', (e) => {
 
 
 function anchorClick(e) {
-  const activeAnchor = document.querySelector('.menu__link-active')
-      activeAnchor.classList.remove('menu__link-active')
-      e.classList.add('menu__link-active')
-      if (menuBody.classList.contains('active')) {
-          toggleMenu() 
-      }
-      const blockId = e.getAttribute('href')
-      document.querySelector(''+ blockId).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest"
-      })
+    const v = 0.5
+    const activeAnchor = document.querySelector('.menu__link-active')
+    activeAnchor.classList.remove('menu__link-active')
+    e.classList.add('menu__link-active')
+    if (menuBody.classList.contains('active')) {
+        toggleMenu()
+    }
+    const w = window.pageYOffset
+
+    const blockId = e.getAttribute('href').substring(1),
+     scrollTarget = document.getElementById(blockId),
+     t = scrollTarget.getBoundingClientRect().top
+     start = null
+
+     requestAnimationFrame(step)
+
+     function step(time) {
+        if (start == null) start = time
+
+        let progress = time - start,
+        r = (t < 0 ? Math.max(w - progress/v, w + t): Math.min(w + progress/v, w + t))
+
+        window.scrollTo(0, r)
+
+        if (r != w + t) {
+            requestAnimationFrame(step)
+        } else {
+            location.hash = scrollTarget
+        }
+     }
+    
+
+
+    //   document.querySelector(''+ blockId).scrollIntoView({
+    //       behavior: "smooth",
+    //       block: "start",
+    //       inline: "nearest"
+    //   })
 }
 function toggleMenu() {
   const btn = document.querySelector('.header__burger');
