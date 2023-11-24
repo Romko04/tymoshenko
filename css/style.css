@@ -253,9 +253,7 @@ body {
     line-height: normal;
 }
 
-.header__menu-link:hover {
-    color: #00B2A0;
-}
+
 
 /*MAIN*/
 
@@ -277,9 +275,9 @@ body {
 }
 
 .banner__content-left {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 63px;
+    gap: 63px; */
     width: 50%;
 }
 
@@ -305,6 +303,7 @@ body {
     line-height: normal;
     border: none;
     cursor: pointer;
+    margin-top: 60px;
 }
 
 .banner__content-right {
@@ -906,7 +905,7 @@ body {
     align-items: center;
     color: #FFF;
     font-family: Montserrat;
-    font-size: clamp(16px,5vw,26px);
+    font-size: clamp(19px,5vw,26px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1266,6 +1265,36 @@ line-height: normal;
         font-size: 18px;
         gap: 10px
     }
+    .buy__btn, .header__menu-link,.consultation__btn,.social__img, .price__button{
+        transition: all .4s ease;
+    }
+    .buy__btn:hover,.consultation__btn:hover,.price__button:hover{
+        background-color: #ff76ab;
+    }
+    .price__button{
+        cursor: pointer;
+    }
+    .price__button:hover{
+        background-color: #ff76ab;
+    }
+    .header__menu-link:hover,.social__img:hover {
+        color: #f58eb6;
+    }
+    .social__img:hover {
+        fill: #ff76ab;
+    }
+    .footer .social__link .social__img:hover {
+        fill: #d8d8d8;
+    }
+    .courses__list-item a img {
+        transition: all .4s ease;
+    }
+    
+    .courses__list-item a img:hover {
+        opacity: 0.7;
+    }
+    
+    
     
 }
 @media (max-width: 991.98px) {
@@ -1564,6 +1593,9 @@ line-height: normal;
     .price__list-item{
         width: 80%;
     }
+    .moduls__accordeon-numb{
+        display: none;
+    }
 }
 
 @media (min-width: 1525px) {
@@ -1571,6 +1603,9 @@ line-height: normal;
     .container,
     .banner__container {
         max-width: 1540px;
+    }
+    .moduls__accordeon-btn{
+        text-align: left;
     }
 
 }
@@ -1587,3 +1622,4 @@ line-height: normal;
         width: 100%;
     }
 }
+/* @media (max-wid) */
