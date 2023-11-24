@@ -1457,15 +1457,20 @@ line-height: normal;
     .banner__btn-link {
         margin: 0 15px;
     }
-
+    .banner__content-left{
+        display: flex;
+    flex-direction: column;
+    gap: 60px;
+    }
     .banner__btn-link button {
         width: 100%;
-        padding: 17px 45px;
+        padding: 25px 45px;
+        margin-top: 0;
     }
 
-    .banner__content-left {
+    /* .banner__content-left {
         gap: 0;
-    }
+    } */
 
     .header__container {
         padding: 25px 15px;
@@ -1589,6 +1594,11 @@ line-height: normal;
     .price__list-item{
         width: 50%;
     }
+    .banner__btn-link button {
+        width: 100%;
+        padding: 16px 45px;
+        margin-top: 0;
+    }
 }
 @media (max-width: 500px) {
     .price__list-item{
@@ -1597,6 +1607,7 @@ line-height: normal;
     .moduls__accordeon-numb{
         display: none;
     }
+    
 }
 
 @media (min-width: 1525px) {
