@@ -171,7 +171,7 @@ body {
 }
 
 .container {
-    max-width: 1168px;
+    max-width: 1268px;
     margin: 0 auto;
     padding: 0 15px;
     position: relative;
@@ -309,12 +309,31 @@ body {
 .banner__content-right {
     width: 50%;
     text-align: right;
+    position: relative;
+    overflow: hidden;
 }
 
 
+.banner__content-img{
+    max-height: 579px;
+    position: relative;
+    z-index: 2;
+}
 
+.banner__content-img__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden; */
+}
+.banner__content-img--background{
+    position: absolute;
+    bottom: -24%;
+    width: 100%;
+    z-index: 1;
+}
 
-
+/* Встановлюємо фонове зображення з SVG */
 
 
 
@@ -332,13 +351,28 @@ body {
     padding-bottom: 30px;
     display: flex;
 }
-
+.about__content-img__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    padding-top: 53px;
+}
+.about__content-img--background{
+    position: absolute;
+    top: 0;
+    /* width: 75%; */
+    height: 62%;
+    z-index: 0;
+}
 .about__content-left {
     width: 39%;
 }
 
 .about__content-img {
-    width: 66%;
+    max-height: 593px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .about__content-right {
@@ -1023,7 +1057,7 @@ body {
 }
 .results__title::after{
     content: '';
-    background-image: url(../img/course/moduls/target.svg);
+    background-image: url('../img/course/moduls/target.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1142,7 +1176,7 @@ body {
 }
 .price__item-title::after{
     content: '';
-    background-image: url(../img/course/result/bulavka.svg);
+    background-image: url('../img/course/result/bulavka.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1254,7 +1288,16 @@ line-height: normal;
 
 
 /* media */
+
+
+
+@media (max-width: 1132px) {
+    .banner__content-img{
+        max-height: 480px;
+    }
+}
 @media (min-width: 991.98px) {
+
     .price__list-item:hover {
         scale: 1.05;
     }
@@ -1301,6 +1344,14 @@ line-height: normal;
 @media (max-width: 991.98px) {
     .about__content-img {
         width: 83%;
+    }
+    .banner__content-img {
+        max-height: 441px;
+    }
+}
+@media (max-width: 839px) {
+    .banner__content-img {
+        max-height: 390px;
     }
 }
 
@@ -1452,6 +1503,15 @@ line-height: normal;
     .banner__content-img {
         position: relative;
         bottom: -2px;
+        width: 70%;
+        height: 100%;
+        max-height: 100%;
+    }
+    .banner__content-img--background {
+        position: absolute;
+        bottom: -25%;
+        width: 100%;
+        z-index: 1;
     }
 
     .banner__btn-link {
@@ -1504,6 +1564,16 @@ line-height: normal;
     .about__title-wrapper {
         text-align: center;
         margin: 65px 0;
+    }
+    .about__content-img--background{
+        left: -15px;
+    }
+    .about__content-img__wrapper{
+        justify-content: left;
+        position: relative;
+    }
+    .about__content-img{
+        object-fit: contain;
     }
 
     .about__title {
