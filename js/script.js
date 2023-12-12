@@ -53,7 +53,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const swiperStartAndFinish = document.querySelector('.swiper-slide__popup')
             let popupContent = document.querySelector('.popup__content')
 
-            popupContent.innerHTML = swiperStartAndFinish.innerHTML
+            popupContent.innerHTML = `
+            <a class="popup__close" href="">
+                <svg class="popup__close-icon" width="30" height="30" fill="#E84483" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512">
+                    <path opacity="1" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+                </svg>
+            </a>
+            ${swiperStartAndFinish.innerHTML}`;
+
 
 
             const popup = document.querySelector('.popup')
@@ -64,7 +71,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 bodyLock()
                 popup.classList.add('active')
                 popup.addEventListener('click',(e)=>{
-                    if (!e.target.closest('.popup__content')) {
+                    if (!e.target.closest('.popup__content') || e.target.closest('.popup__close')) {
+                        e.preventDefault()
                         popup.classList.remove('active')
                         bodyUnLock()
                     }
@@ -72,6 +80,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
             
         }
+
+        
 
     })
     
