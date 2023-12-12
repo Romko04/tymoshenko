@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         //Прослушка для попапа
         if (e.target.classList.contains('swiper-slide__btn')) {
-            const swiperStartAndFinish = document.querySelector('.swiper-slide__popup')
+            const swiperStartAndFinish = e.target.closest('.swiper-slide').querySelector('.swiper-slide__popup')
             let popupContent = document.querySelector('.popup__content')
 
             popupContent.innerHTML = `
