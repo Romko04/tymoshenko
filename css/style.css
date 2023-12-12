@@ -704,7 +704,7 @@ white-space: nowrap;
 }
 .popup__content {
     background-color: #fff;
-    width: 100%;
+    max-width: 800px;
     padding: 30px;
     transition: all 0.5s ease ;
     opacity: 0;
@@ -1954,6 +1954,10 @@ line-height: normal;
     }
     .courses__list-item__img{
         width: 100%;
+    }
+    .popup__content{
+        max-width: auto;
+        width: 95%;
     }
 }
 
