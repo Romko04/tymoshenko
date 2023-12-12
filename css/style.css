@@ -581,7 +581,7 @@ padding: 44px;
 .cases__slide-inst {
     color: #000;
 font-family: Gilroy;
-font-size: 18px;
+font-size: 22px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -589,7 +589,7 @@ line-height: normal;
 .cases__slide-expert, .swiper-slide__popup-result {
     color: #000;
     font-family: Gilroy;
-    font-size: 18px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
@@ -653,7 +653,7 @@ white-space: nowrap;
     padding: 13px;
     color: #FFF;
     font-family: Gilroy;
-    font-size: 18px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1992,7 +1992,15 @@ line-height: normal;
     .swiper-slide__popup-finish__list li::before, .swiper-slide__popup-start__list li::before {
         left: 4px;
     }
-    
+    .swiper-slide__btn{
+        margin: 35px;
+    }
+    .swiper-slide__popup-result {
+        width: 100%;
+        font-size: 30px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 380px) {
     .swiper-slide__popup-finish__text {
