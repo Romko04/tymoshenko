@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 70,
-        autoHeight: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
