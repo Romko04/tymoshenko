@@ -1152,7 +1152,7 @@ white-space: nowrap;
 .who__list-item {
     color: #000;
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1329,7 +1329,7 @@ white-space: nowrap;
     text-align: left;
     color: #000;
     font-family: Montserrat;
-    font-size: 15px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1349,7 +1349,7 @@ white-space: nowrap;
 .bonuses__list {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     position: relative;
 }
 
@@ -1415,7 +1415,7 @@ white-space: nowrap;
 .results__list-item {
     color: #000;
     font-family: Montserrat;
-    font-size: 15px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1543,7 +1543,7 @@ white-space: nowrap;
 .price__item-result__list-item {
     color: #000;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1618,7 +1618,7 @@ border: none;
 .price__button-link{
     color: #FFF;
 font-family: Montserrat;
-font-size: 18px;
+font-size: 21px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
