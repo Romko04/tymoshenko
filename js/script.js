@@ -1,42 +1,57 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 70,
+        // autoHeight: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1051: {
+                slidesPerView: 3,
+            },
+            725: {
+                slidesPerView: 2,
+            },
+        },
+    });
+    const courseTextList = document.querySelectorAll('.courses__text')
+    // Отримуємо початкові значення елементів і зберігаємо їх у масив
+    const initialCourseTextValues = Array.from(document.querySelectorAll('.courses__text')).map(element => element.textContent);
 
+    const menuBody = document.querySelector('.menu__body');
     let unlockPopup = true
     const body = document.querySelector('body')
     const timeout = 500
 
-
+    isResize = false
 
     if (window.innerWidth >= 999) {
-        handleTextTruncation();
+        handleTextTruncation()
+        isResize = true
     }
-    
-    
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 999) {
-            handleTextTruncation();
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth <= 999 && isResize) {
+            isResize = false
+            for (let i = 0; i < initialCourseTextValues.length; i++) {
+            courseTextList[i].classList.remove('courses__text--hidden')
+            courseTextList[i].innerText = initialCourseTextValues[i]
+            }
         }
+        if (window.innerWidth >= 999 && !isResize) {
+            isResize = true
+            handleTextTruncation()
+        }
+        
     });
-    
-    new Swiper('.swiper', {
-        slidesPerView: 1,
-        spaceBetween: 70,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          dynamicBullets: true,
-        },
-        breakpoints: {
-          1051: {
-            slidesPerView: 3,
-          },
-          725: {
-            slidesPerView: 2,
-          },
-        },
-      });
-    
-    const menuBody = document.querySelector('.menu__body');
+
+
+
     // Event listeners
+
+
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('anchor') || e.target.classList.contains('buy__btn')) {
             e.preventDefault()
@@ -69,7 +84,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if (unlockPopup) {
                 bodyLock()
                 popup.classList.add('active')
-                popup.addEventListener('click',(e)=>{
+                popup.addEventListener('click', (e) => {
                     if (!e.target.closest('.popup__content') || e.target.closest('.popup__close')) {
                         e.preventDefault()
                         popup.classList.remove('active')
@@ -77,15 +92,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     }
                 })
             }
-            
+
         }
 
-        
+
 
     })
-    
+
+
+
     // Якоря
-    
+
     function bodyLock() {
         const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
         body.classList.add('body--lock')
@@ -111,7 +128,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             unlockPopup = true
         }, timeout);
     }
-    
+
     function anchorClick(e) {
         const v = 0.5
         const activeAnchor = document.querySelector('.menu__link-active')
@@ -121,22 +138,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
             toggleMenu()
         }
         const w = window.pageYOffset
-    
+
         const blockId = e.getAttribute('href').substring(1),
             scrollTarget = document.getElementById(blockId),
             t = scrollTarget.getBoundingClientRect().top
         start = null
-    
+
         requestAnimationFrame(step)
-    
+
         function step(time) {
             if (start == null) start = time
-    
+
             let progress = time - start,
                 r = (t < 0 ? Math.max(w - progress / v, w + t) : Math.min(w + progress / v, w + t))
-    
+
             window.scrollTo(0, r)
-    
+
             if (r != w + t) {
                 requestAnimationFrame(step)
             } else {
@@ -144,7 +161,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
         }
     }
-    
+
     //Бургер
     function toggleMenu() {
         const btn = document.querySelector('.header__burger');
@@ -152,12 +169,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         btn.classList.toggle('active');
         btn.classList.contains('active') ? document.body.classList.add('scroll--block') : document.body.classList.remove('scroll--block')
     }
-    
-    
+
+
     //Аккордеон
-    
+
     const acc = document?.querySelectorAll('.accordeon');
-    
+
     if (acc) {
         for (let i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function () {
@@ -166,26 +183,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
         }
     }
-    
+
     // Обрізання тексту в карточках курсу
-    
+
     function handleTextTruncation() {
-        const courseTextList = document.querySelectorAll('.courses__text')
-    
-    if (courseTextList) {
-        for (let i = 0; i < courseTextList.length; i++) {
-            const textElement = courseTextList[i]
-    
-            let textContent = textElement.textContent
-            if (textContent.length > 36) {
-                textElement.classList.add('courses__text--hidden')
-    
-                const changedText = textContent.slice(0, 36 - 3) + "..."
-    
-                textElement.textContent = changedText
+
+        if (courseTextList) {
+            for (let i = 0; i < courseTextList.length; i++) {
+                const textElement = courseTextList[i]
+
+                let textContent = textElement.textContent
+                if (textContent.length > 36) {
+                    textElement.classList.add('courses__text--hidden')
+
+                    const changedText = textContent.slice(0, 36 - 3) + "..."
+
+                    textElement.textContent = changedText
+                }
             }
         }
-    }
     }
 
 
