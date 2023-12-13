@@ -1543,14 +1543,14 @@ white-space: nowrap;
 .price__item-result__list-item {
     color: #000;
     font-family: Montserrat;
-    font-size: 21px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.88px;
     margin-bottom: 5px;
     position: relative;
-    padding-left: 25px;
+    padding-left: 27px;
 }
 
 .price__item-result__list-item::before {
@@ -1609,7 +1609,7 @@ white-space: nowrap;
 }
 
 .price__button {
-    padding: 14px;
+    padding: 17px;
     /* margin: 0 25px; */
     border-radius: 10px;
 background: #FC649F;
@@ -2079,7 +2079,7 @@ line-height: normal;
         padding: 25px;
     }
     .price__list-item{
-        width: 80%;
+        width: 90%;
     }
     .moduls__accordeon-numb{
         display: none;
