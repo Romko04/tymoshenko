@@ -244,8 +244,32 @@ img {
     fill: #E84483;
 }
 
+.header{
+    transition: all ease .5s;
+}
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #feeeef;
+    z-index: 4;
+    animation-name: headerAnimation;
+    animation-duration: .5s;
+}
+
+@keyframes headerAnimation {
+    0% {
+        opacity: 0;
+        top: -70px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .header__container {
-    padding: 35px 15px;
+    padding: 15px;
     display: flex;
     align-items: center;
     z-index: 2;
@@ -472,16 +496,16 @@ body {
 }
 .container {
 } */
-/* .courses__container {
-    
-} */
+.courses__container {
+    padding-top: 75px;
+}
 .courses__content{
     display: flex;
 }
 
 .title__wrapper {
     text-align: center;
-    margin: 75px 0;
+    margin-bottom: 75px;
 }
 
 .courses__list{
@@ -566,6 +590,7 @@ line-height: normal;
 
 }
 .cases__container{
+    padding-top: 75px;
     padding-bottom: 200px;
 }
 .swiper-slide {
@@ -702,7 +727,7 @@ white-space: nowrap;
     height: 100%;
     background-color: #0000008e;
     inset: 0;
-    z-index: 3;
+    z-index: 5;
     opacity: 0;
     visibility: hidden;
     overflow-y: auto;
@@ -1076,7 +1101,7 @@ white-space: nowrap;
     justify-content: space-between;
     align-items: flex-start;
     gap: calc(10px + (200 - 60) * ((100vw - 320px) / (1200 - 320)));;
-
+    padding-top: 75px;
 }
 
 .title__wrapper {
@@ -1085,8 +1110,8 @@ white-space: nowrap;
     justify-content: center;
 }
 
-.who__title,
-.title__wrapper span {
+.page__title,
+.page__title span {
     color: #000;
     /* text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); */
     font-family: Montserrat;
@@ -1096,8 +1121,12 @@ white-space: nowrap;
     line-height: normal;
 }
 
-.who__title {
+.page__title {
     position: relative;
+    margin-top: 75px;
+}
+.title__page-wrapper--course{
+    margin-bottom: 0;
 }
 .who__title span{
     color: #fc649f;
@@ -1172,11 +1201,14 @@ white-space: nowrap;
     border-radius: 50%;
 }
 
-
+.result{
+    padding-top: 75px;
+}
 .result__container {
     display: flex;
     align-items: center;
     gap: calc(10px + (200 - 60) * ((100vw - 320px) / (1200 - 320)));;
+    /* padding-top: 75px; */
 }
 
 .result__content-left,
@@ -1273,6 +1305,10 @@ white-space: nowrap;
 
 
 /* Style the buttons that are used to open and close the accordion panel */
+
+.moduls__container{
+    padding-top: 75px;
+}
 .moduls__accordeon-btn {
     display: flex;
     align-items: center;
@@ -1473,7 +1509,9 @@ white-space: nowrap;
 
 
 
-
+.price{
+padding-top: 75px;
+}
 
 .price__container {
     display: flex;

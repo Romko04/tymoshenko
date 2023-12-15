@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let unlockPopup = true
     const body = document.querySelector('body')
     const timeout = 500
+    const header = document.querySelector('.header')
+
+    const banner = document.querySelector('.banner__container') 
 
     isResize = false
 
@@ -31,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
         handleTextTruncation()
         isResize = true
     }
+    // Event listeners
+
 
     window.addEventListener('resize', function () {
         if (window.innerWidth <= 999 && isResize) {
@@ -47,9 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
+    window.addEventListener('scroll',()=>{
+        if (window.scrollY > header.offsetHeight ) {
+            document.body.style.marginTop = header.offsetHeight + 'px'
+            header.classList.add('fixed')
+        } else {
+            header.classList.remove('fixed')
+            document.body.removeAttribute('style')
+            
+        }
+    })
 
-
-    // Event listeners
 
 
     document.addEventListener('click', (e) => {
@@ -107,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
         body.classList.add('body--lock')
         body.style.paddingRight = lockPaddingValue
+        header.style.paddingRight = lockPaddingValue
 
         unlockPopup = false
 
@@ -118,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function bodyUnLock() {
         setTimeout(() => {
             body.style.paddingRight = '0px'
+            header.style.paddingRight = '0px'
             body.classList.remove('body--lock')
 
         }, timeout);
@@ -130,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function anchorClick(e) {
-        const v = 0.5
+        const v = 0.3
         const activeAnchor = document.querySelector('.menu__link-active')
         activeAnchor.classList.remove('menu__link-active')
         e.classList.add('menu__link-active')
@@ -167,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const btn = document.querySelector('.header__burger');
         menuBody.classList.toggle('active');
         btn.classList.toggle('active');
-        btn.classList.contains('active') ? document.body.classList.add('scroll--block') : document.body.classList.remove('scroll--block')
+        btn.classList.contains('active') ? bodyLock() : bodyUnLock()
     }
 
 
