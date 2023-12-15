@@ -1866,6 +1866,9 @@ line-height: normal;
     .container {
         max-width: 100%;
     }
+    .header__container {
+        padding: 15px;
+    }
 
     .banner__container {
         flex-direction: column-reverse;
