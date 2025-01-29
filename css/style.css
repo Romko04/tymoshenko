@@ -142,7 +142,6 @@ a {
 
 body {
     line-height: 1;
-    height: 100vh;
     font-family: var(--font-family);
     background: #131313;
     position: relative;
@@ -151,12 +150,23 @@ body {
     background-repeat: contain;
     background-size: cover;
     width: 100%;
-    height: 120rem;
     top: 0;
-    bottom: 0;
+    background-size: 100% 120rem; /* Ширина 100%, висота 120rem */
     z-index: -1;
+    overflow: visible;
 }
 
+
+  ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #ff0262;
+      border-radius: 10px;
+  }
 
 
 .body--lock {
@@ -2240,8 +2250,9 @@ img {
         align-items: center;
         margin: auto 0;
     }
+
     .header__menu-item {
-        padding: 1rem 2rem!important;
+        padding: 1rem 2rem !important;
     }
 
 
@@ -2338,7 +2349,8 @@ img {
         padding: 1.8rem 7.5rem;
         border-radius: 1rem;
     }
-    .button::after{
+
+    .button::after {
         border-radius: 1rem;
     }
 
@@ -2395,7 +2407,8 @@ img {
         transform: scaleX(-1);
     }
 
-    .about::before, .who::before {
+    .about::before,
+    .who::before {
         display: none;
     }
 
@@ -2413,14 +2426,16 @@ img {
     }
 
 
-    .about .black-back{
+    .about .black-back {
         display: none;
     }
-    .about__content-left{
+
+    .about__content-left {
         position: relative;
         width: 100%;
     }
-    .about__content-left::after{
+
+    .about__content-left::after {
         content: '';
         position: absolute;
         filter: blur(2.5rem);
@@ -2453,19 +2468,22 @@ img {
         gap: 0;
         align-items: center;
     }
-    .title span{
+
+    .title span {
         font-family: var(--font-family);
         font-size: 3.5rem;
         line-height: 111%;
     }
+
     .title:not(.banner__title)::after {
         height: 4.4rem;
     }
+
     .about__title::after {
         right: -4rem !important;
         left: -4rem !important;
     }
-    
+
 
     .about__content-img__wrapper {
         width: 23rem;
@@ -2474,17 +2492,18 @@ img {
         position: relative;
     }
 
-    
+
     .about__list {
         gap: 1.8rem;
     }
+
     .about__list-item {
         font-size: 2.1rem;
         line-height: 98%;
         gap: 1.1rem;
     }
-    .about__list-item svg
-    {
+
+    .about__list-item svg {
         width: 1.8rem;
         height: 1.4rem;
     }
@@ -2511,20 +2530,24 @@ img {
         font-size: 1.6rem;
         line-height: 130%;
     }
+
     .courses__list {
         gap: 3rem;
     }
+
     .courses__list-item::after {
         width: 1.3rem;
         height: 1.3rem;
         top: 4.8rem;
         right: 2.5rem;
     }
+
     .counter::before {
         font-size: 1.5rem;
         line-height: 142%;
         top: 0.5rem;
     }
+
     .counter {
         border-left: 3.2rem solid transparent;
         border-right: 3.2rem solid transparent;
@@ -2541,7 +2564,8 @@ img {
         gap: 1.9rem;
     }
 
-    .footer__right, .footer__left {
+    .footer__right,
+    .footer__left {
         justify-content: center;
         align-items: center;
     }
@@ -2550,19 +2574,22 @@ img {
         text-align: center;
     }
 
-    .footer__link, .banks__text, .footer__credit a {
+    .footer__link,
+    .banks__text,
+    .footer__credit a {
         font-size: 1.4rem;
         max-width: 20rem;
         line-height: 103%;
         text-align: center;
     }
+
     .footer {
         padding: 10rem 0 5rem;
     }
 
     .hero__subtitle {
         font-size: 2rem;
-    line-height: 103%;
+        line-height: 103%;
     }
 
     .who__list {
@@ -2571,20 +2598,25 @@ img {
         padding-bottom: 10rem;
     }
 
-    .who__list-item--top, .who__list-item--bottom {
+    .who__list-item--top,
+    .who__list-item--bottom {
         padding: 2rem 2.4rem 2rem 2.4rem;
     }
 
-    .who__list-item--top, .who__list-item--bottom {
+    .who__list-item--top,
+    .who__list-item--bottom {
         padding-left: 4.4rem;
     }
-    .who__list-item--top ul li::after, .who__list-item--bottom ul li::after {
+
+    .who__list-item--top ul li::after,
+    .who__list-item--bottom ul li::after {
         width: 1.4rem;
         height: 1.4rem;
         left: -2.1rem;
     }
 
-    .who__list-item--top, .who__list-item--bottom {
+    .who__list-item--top,
+    .who__list-item--bottom {
         font-size: 1.8rem;
         line-height: 111%;
     }
@@ -2597,7 +2629,7 @@ img {
 
     .who__list-item::before {
         width: 2.6rem;
-    height: 5.7rem;
+        height: 5.7rem;
     }
 
     .who__list-item--top::after {
@@ -2619,6 +2651,7 @@ img {
         line-height: 111%;
         padding: 1rem 4rem 1rem .2rem;
     }
+
     .moduls__accordeon-btn::after {
         right: 1.5rem;
         height: 1.4rem;
@@ -2635,7 +2668,8 @@ img {
         padding: 1rem 4rem 1rem .2rem;
     }
 
-    .bonuses__title, .results__title {
+    .bonuses__title,
+    .results__title {
         font-size: 2rem;
         text-align: left;
     }
@@ -2680,7 +2714,7 @@ img {
     .price__item-result__list-item::before {
         width: 1.8rem;
         height: 1.6rem;
-        
+
     }
 
     .price__breakdown p {
@@ -2696,9 +2730,11 @@ img {
         padding: 1.6rem 5rem;
         border-radius: 1rem;
     }
-    .button--small::after{
+
+    .button--small::after {
         border-radius: 1rem;
     }
+
     .button--small span {
         font-size: 2.1rem;
         line-height: 103%;
@@ -2719,9 +2755,10 @@ img {
 
     .cases__slide-title {
         font-size: 2.5rem;
-    text-align: center;
-    margin-top: 1.5rem;
+        text-align: center;
+        margin-top: 1.5rem;
     }
+
     .cases__slide-inst {
         font-weight: 700;
         font-size: 2.3rem;
@@ -2731,13 +2768,17 @@ img {
         margin-top: 2.5rem;
     }
 
-    .cases__slide-results__start-value, .cases__slide-results__finish-value {
+    .cases__slide-results__start-value,
+    .cases__slide-results__finish-value {
         font-size: 1.7rem;
         line-height: 111%;
         width: 18.4rem;
     }
 
-    .cases__slide-results__start-text, .cases__slide-results__finish-text, .swiper-slide__popup-start__text, .swiper-slide__popup-finish__text {
+    .cases__slide-results__start-text,
+    .cases__slide-results__finish-text,
+    .swiper-slide__popup-start__text,
+    .swiper-slide__popup-finish__text {
         font-size: 1.7rem;
     }
 
@@ -2749,7 +2790,8 @@ img {
         font-size: 2.3rem;
     }
 
-    .swiper-slide__popup-finish__list li, .swiper-slide__popup-start__list li {
+    .swiper-slide__popup-finish__list li,
+    .swiper-slide__popup-start__list li {
         font-size: 2rem;
     }
 
@@ -2757,12 +2799,16 @@ img {
         margin-top: 8rem;
     }
 
-    .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after,
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
         width: 2rem;
         height: 2rem;
     }
 
-    .swiper-button-prev, .swiper-button-next {
+    .swiper-button-prev,
+    .swiper-button-next {
         padding: 2rem;
     }
 
@@ -2786,10 +2832,11 @@ img {
     .hero__title-wrapper::after {
         opacity: 1;
     }
+
     .banner::after {
         left: -1.5rem;
         right: -1.5rem;
-    } 
+    }
 
     .course .banner::after {
         height: 23.6rem;
