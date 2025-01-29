@@ -2849,3 +2849,12 @@ img {
     }
 
 }
+
+.who__list-item, 
+.accordeon, 
+.price__list, 
+.swiper__container, 
+.about__list-item, 
+.courses__list a {
+  will-change: transform, opacity;
+}

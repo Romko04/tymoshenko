@@ -3,7 +3,9 @@ class Animations {
     this.init();
   }
   init() {
-    this.initAnimations(), this.scrollbarAnimations();
+    this.initAnimations();
+    this.scrollbarAnimations();
+    this.optimizePerformance();
   }
   splitText() {
     this.typeSplit = new SplitType("[text-split]", {
@@ -85,7 +87,7 @@ class Animations {
         scrollTrigger: {
           trigger: ".accordeon",
           start: "top 90%",
-          end: "bottom 100%",
+          end: "top 30%",
           scrub: !0,
           once: !0,
         },
@@ -98,7 +100,7 @@ class Animations {
         scrollTrigger: {
           trigger: ".price__container",
           start: "top 90%",
-          end: "bottom 100%",
+          end: "top 30%",
           scrub: !0,
           once: !0,
         },
@@ -111,7 +113,7 @@ class Animations {
         scrollTrigger: {
           trigger: ".swiper__container",
           start: "top 90%",
-          end: "bottom 100%",
+          end: "top 30%",
           scrub: !0,
           once: !0,
         },
@@ -152,6 +154,21 @@ class Animations {
         r.raf(1e3 * t);
       }),
       gsap.ticker.lagSmoothing(0);
+  }
+  optimizePerformance() {
+    // Підвищуємо пріоритет рендерингу
+    performance.mark("start-performance");
+
+    // Battery API – адаптація анімацій до рівня заряду
+    if ("getBattery" in navigator) {
+      navigator.getBattery().then((battery) => {
+        if (battery.level > 0.2 && !battery.savingMode) {
+          gsap.globalTimeline.timeScale(1.2);
+        } else {
+          gsap.globalTimeline.timeScale(0.8);
+        }
+      });
+    }
   }
 }
 window.addEventListener("DOMContentLoaded", () => {
