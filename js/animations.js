@@ -27,8 +27,8 @@ class Animations {
         scrollTrigger: {
           once: true,
           trigger: ".who__list",
-          start: "top 90%",
-          end: "bottom 100%",
+          start: "top 70%",
+          end: "bottom 80%",
           scrub: true,
         },
       });
@@ -44,8 +44,8 @@ class Animations {
         duration: 1,
         scrollTrigger: {
           trigger: ".moduls__accordeon",
-          start: "top 90%",
-          end: "bottom 100%",
+          start: "top 60%",
+          end: "bottom 80%",
           scrub: true,
           once: true,
         },
