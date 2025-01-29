@@ -2288,7 +2288,7 @@ img {
 
     body {
         background-image: url('../img/assets/noiseMobile.webp');
-        height: 52rem;
+        background-size: 100% 42rem ;
     }
 
     .header__inst {
