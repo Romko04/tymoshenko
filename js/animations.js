@@ -16,20 +16,26 @@ class Animations {
   }
 
   initAnimations() {
-    gsap.from(".who__list-item", {
-      y: -100,
-      opacity: 0,
-      duration: 1,
-      ease: "power3.out",
-      stagger: 0.2,
-      scrollTrigger: {
-        once: !0,
-        trigger: ".who__list-item",
-        start: "top 90%",
-        end: "bottom 100%",
-        scrub: true,
-      },
-    }),
+    // Check if .who__list-item exists before applying animation
+    if (document.querySelectorAll(".who__list-item").length) {
+      gsap.from(".who__list-item", {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          once: true,
+          trigger: ".who__list-item",
+          start: "top 90%",
+          end: "bottom 100%",
+          scrub: true,
+        },
+      });
+    }
+
+    // Check if .accordeon exists before applying animation
+    if (document.querySelector(".accordeon")) {
       gsap.from(".accordeon", {
         opacity: 0,
         y: 50,
@@ -41,9 +47,13 @@ class Animations {
           start: "top 90%",
           end: "top 30%",
           scrub: true,
-          once: !0,
+          once: true,
         },
-      }),
+      });
+    }
+
+    // Check if .price__list exists before applying animation
+    if (document.querySelector(".price__list")) {
       gsap.from(".price__list", {
         opacity: 0,
         y: 50,
@@ -54,9 +64,13 @@ class Animations {
           start: "top 90%",
           end: "top 30%",
           scrub: true,
-          once: !0,
+          once: true,
         },
-      }),
+      });
+    }
+
+    // Check if .swiper__container exists before applying animation
+    if (document.querySelector(".swiper__container")) {
       gsap.from(".swiper__container", {
         opacity: 0,
         y: 50,
@@ -67,36 +81,48 @@ class Animations {
           start: "top 90%",
           end: "top 30%",
           scrub: true,
-          once: !0,
+          once: true,
         },
-      }),
+      });
+    }
+
+    // Check if .about__list-item exists before applying animation
+    if (document.querySelectorAll(".about__list-item").length) {
       gsap.from(".about__list-item", {
         opacity: 0,
         y: 50,
         duration: 1,
+        stagger: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".about__list",
           start: "top 90%",
           end: "bottom 100%",
           scrub: true,
-          once: !0,
+          once: true,
         },
-      }),
+      });
+    }
+
+    // Check if .courses__list a exists before applying animation
+    if (document.querySelectorAll(".courses__list a").length) {
       gsap.from(".courses__list a", {
         opacity: 0,
         y: 100,
         duration: 1,
+        stagger: 0.2,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".courses__list",
           start: "top 90%",
           end: "bottom 100%",
           scrub: true,
-          once: !0,
+          once: true,
         },
       });
+    }
   }
+
   scrollbarAnimations() {
     const lenis = new Lenis({
       duration: 1.7,
