@@ -97,7 +97,7 @@ class Animations {
         scrollTrigger: {
           trigger: ".about__list",
           start: "top 90%",
-          end: "top 30%",
+          end: "bottom 100%",
           scrub: true,
           once: true,
         },
