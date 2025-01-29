@@ -1,6 +1,13 @@
 class Animations {
   constructor() {
+    this.isMobile = this.checkIfMobile(); // Визначаємо тип пристрою
     this.init();
+  }
+  checkIfMobile() {
+    return (
+      /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent) ||
+      window.matchMedia("(max-width: 1024px)").matches
+    );
   }
   init() {
     this.initAnimations();
@@ -153,7 +160,6 @@ class Animations {
       gsap.ticker.add((t) => {
         r.raf(1e3 * t);
       }),
-      gsap.ticker.lagSmoothing(0);
   }
   optimizePerformance() {
     // Підвищуємо пріоритет рендерингу
