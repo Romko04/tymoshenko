@@ -2232,7 +2232,7 @@ img {
         z-index: 5;
         flex-direction: column;
         display: flex;
-
+        height: 100vh;
     }
 
     .menu__body.active {
