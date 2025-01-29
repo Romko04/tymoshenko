@@ -159,7 +159,7 @@ class Animations {
     r.on("scroll", ScrollTrigger.update),
       gsap.ticker.add((t) => {
         r.raf(1e3 * t);
-      }),
+      });
   }
   optimizePerformance() {
     // Підвищуємо пріоритет рендерингу
