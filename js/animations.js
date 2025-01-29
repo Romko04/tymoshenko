@@ -26,7 +26,7 @@ class Animations {
         stagger: 0.2,
         scrollTrigger: {
           once: true,
-          trigger: ".who__list-item",
+          trigger: ".who__list",
           start: "top 90%",
           end: "bottom 100%",
           scrub: true,
@@ -39,13 +39,13 @@ class Animations {
       gsap.from(".accordeon", {
         opacity: 0,
         y: 50,
-        stagger: 0.2,
+        stagger: 0.4,
         ease: "power3.out",
         duration: 1,
         scrollTrigger: {
           trigger: ".moduls__accordeon",
           start: "top 90%",
-          end: "top 30%",
+          end: "bottom 100%",
           scrub: true,
           once: true,
         },
@@ -53,14 +53,15 @@ class Animations {
     }
 
     // Check if .price__list exists before applying animation
-    if (document.querySelector(".price__list")) {
-      gsap.from(".price__list", {
+    if (document.querySelector(".price__list-item")) {
+      gsap.from(".price__list-item", {
         opacity: 0,
         y: 50,
-        duration: 0.5,
+        stagger: 0.2,
+        duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".price__container",
+          trigger: ".price__list",
           start: "top 90%",
           end: "top 30%",
           scrub: true,
@@ -97,7 +98,7 @@ class Animations {
         scrollTrigger: {
           trigger: ".about__list",
           start: "top 90%",
-          end: "bottom 100%",
+          end: "top 30%",
           scrub: true,
           once: true,
         },
