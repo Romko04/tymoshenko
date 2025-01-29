@@ -54,14 +54,13 @@ class Animations {
 
     // Check if .price__list exists before applying animation
     if (document.querySelector(".price__list-item")) {
-      gsap.from(".price__list-item", {
+      gsap.from(".price__container", {
         opacity: 0,
         y: 50,
-        stagger: 0.2,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".price__list",
+          trigger: ".price__container",
           start: "top 90%",
           end: "top 30%",
           scrub: true,
