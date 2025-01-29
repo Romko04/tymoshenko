@@ -23,12 +23,12 @@ class Animations {
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.2,
+        stagger: 0.5,
         scrollTrigger: {
           once: true,
           trigger: ".who__list",
-          start: "top 70%",
-          end: "bottom 80%",
+          start: "top 90%",
+          end: "bottom 100%",
           scrub: true,
         },
       });
