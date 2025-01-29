@@ -19,11 +19,11 @@ class Animations {
     // Check if .who__list-item exists before applying animation
     if (document.querySelectorAll(".who__list-item").length) {
       gsap.from(".who__list-item", {
-        y: -100,
+        y: -50,
         opacity: 0,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.5,
+        stagger: 0.4,
         scrollTrigger: {
           once: true,
           trigger: ".who__list",
