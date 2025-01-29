@@ -145,7 +145,7 @@ body {
     font-family: var(--font-family);
     background: #131313;
     position: relative;
-    background-image: url('../img/assets/noise2.png');
+    background-image: url('../img/assets/noise2.webp');
     background-position: center;
     background-repeat: contain;
     background-size: cover;
@@ -444,7 +444,7 @@ img {
 
 .fire {
     content: '';
-    background-image: url('../img/assets/firePng.png');
+    background-image: url('../img/assets/fire.webp');
     background-repeat: repeat;
     background-size: cover;
     width: 72rem;
@@ -1571,7 +1571,10 @@ img {
     display: flex;
     gap: 5.7rem;
     margin-top: 12rem;
-    padding-bottom: 15rem;
+}
+
+.moduls__container {
+    padding-top: 15rem;
 }
 
 .who__list-item {
@@ -2595,7 +2598,10 @@ img {
     .who__list {
         flex-direction: column;
         gap: 7.7rem;
-        padding-bottom: 10rem;
+    }
+
+    .moduls__container {
+        padding-top: 10rem;
     }
 
     .who__list-item--top,

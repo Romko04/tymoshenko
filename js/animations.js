@@ -6,9 +6,6 @@ class Animations {
   // Инициализация
   init() {
     // Разбить текст на слова и буквы
-    this.splitText();
-    // Установить начальную прозрачность
-    gsap.set("[text-split]", { opacity: 1 });
     // Добавить анимации
     this.initAnimations();
 
