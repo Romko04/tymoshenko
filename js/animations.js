@@ -92,7 +92,7 @@ class Animations {
         stagger: 0.5,
         duration: 1,
         scrollTrigger: {
-          trigger: ".accordeon",
+          trigger: ".moduls__accordeon",
           start: "top 90%",
           end: "top 30%",
           scrub: !0,
@@ -155,11 +155,24 @@ class Animations {
       });
   }
   scrollbarAnimations() {
-    const r = new Lenis();
-    r.on("scroll", ScrollTrigger.update),
-      gsap.ticker.add((t) => {
-        r.raf(1e3 * t);
-      });
+    const lenis = new Lenis({
+      duration: 1.7,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      direction: "vertical", // vertical, horizontal
+      gestureDirection: "vertical", // vertical, horizontal, both
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   }
   optimizePerformance() {
     // Підвищуємо пріоритет рендерингу
