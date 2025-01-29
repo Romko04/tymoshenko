@@ -20,6 +20,8 @@ class Animations {
       y: -100,
       opacity: 0,
       duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
       scrollTrigger: {
         once: !0,
         trigger: ".who__list-item",
@@ -31,6 +33,8 @@ class Animations {
       gsap.from(".accordeon", {
         opacity: 0,
         y: 50,
+        stagger: 0.2,
+        ease: "power3.out",
         duration: 1,
         scrollTrigger: {
           trigger: ".moduls__accordeon",
@@ -44,6 +48,7 @@ class Animations {
         opacity: 0,
         y: 50,
         duration: 0.5,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: ".price__container",
           start: "top 90%",
@@ -56,6 +61,7 @@ class Animations {
         opacity: 0,
         y: 50,
         duration: 1,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: ".swiper__container",
           start: "top 90%",
