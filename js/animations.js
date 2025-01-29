@@ -14,78 +14,21 @@ class Animations {
     this.scrollbarAnimations();
     this.optimizePerformance();
   }
-  splitText() {
-    this.typeSplit = new SplitType("[text-split]", {
-      types: "words, chars",
-      tagName: "span",
-    });
-  }
-  createScrollTrigger(r, t) {
-    ScrollTrigger.create({
-      trigger: r,
-      start: "top bottom",
-      onLeaveBack: () => {
-        t.progress(0), t.pause();
+
+  initAnimations() {
+    gsap.from(".who__list-item", {
+      y: -100,
+      opacity: 0,
+      stagger: 0.5,
+      duration: 1,
+      scrollTrigger: {
+        once: !0,
+        trigger: ".who__list-item",
+        start: "top 90%",
+        end: "bottom 100%",
+        scrub: this.isMobile ? false : true,
       },
     }),
-      ScrollTrigger.create({
-        trigger: r,
-        start: "top 60%",
-        onEnter: () => t.play(),
-      });
-  }
-  initAnimations() {
-    document.querySelectorAll("[words-slide-from-left]").forEach((r) => {
-      const t = gsap.timeline({ paused: !0 });
-      t.from(r.querySelectorAll(".word"), {
-        opacity: 0,
-        x: "-1em",
-        duration: 0.6,
-        ease: "power2.out",
-        stagger: { amount: 0.2 },
-      }),
-        this.createScrollTrigger(r, t);
-    }),
-      document.querySelectorAll("[letters-fade-in]").forEach((r) => {
-        const t = gsap.timeline({ paused: !0 });
-        t.from(r.querySelectorAll(".char"), {
-          opacity: 0,
-          duration: 0.2,
-          ease: "power1.out",
-          stagger: { amount: 0.8 },
-        }),
-          this.createScrollTrigger(r, t);
-      }),
-      document.querySelectorAll("[scrub-each-word]").forEach((r) => {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: r,
-              start: "top 90%",
-              end: "top 30%",
-              scrub: !0,
-            },
-          })
-          .from(r.querySelectorAll(".word"), {
-            opacity: 0.2,
-            duration: 0.2,
-            ease: "power1.out",
-            stagger: { each: 0.4 },
-          });
-      }),
-      gsap.from(".who__list-item", {
-        y: -100,
-        opacity: 0,
-        stagger: 0.5,
-        duration: 1,
-        scrollTrigger: {
-          once: !0,
-          trigger: ".who__list-item",
-          start: "top 90%",
-          end: "bottom 100%",
-          scrub: !0,
-        },
-      }),
       gsap.from(".accordeon", {
         opacity: 0,
         y: 50,
@@ -95,7 +38,7 @@ class Animations {
           trigger: ".moduls__accordeon",
           start: "top 90%",
           end: "top 30%",
-          scrub: !0,
+          scrub: this.isMobile ? false : true,
           once: !0,
         },
       }),
@@ -108,7 +51,7 @@ class Animations {
           trigger: ".price__container",
           start: "top 90%",
           end: "top 30%",
-          scrub: !0,
+          scrub: this.isMobile ? false : true,
           once: !0,
         },
       }),
@@ -121,7 +64,7 @@ class Animations {
           trigger: ".swiper__container",
           start: "top 90%",
           end: "top 30%",
-          scrub: !0,
+          scrub: this.isMobile ? false : true,
           once: !0,
         },
       }),
@@ -135,7 +78,7 @@ class Animations {
           trigger: ".about__list",
           start: "top 90%",
           end: "bottom 100%",
-          scrub: !0,
+          scrub: this.isMobile ? false : true,
           once: !0,
         },
       }),
@@ -149,7 +92,7 @@ class Animations {
           trigger: ".courses__list",
           start: "top 90%",
           end: "bottom 100%",
-          scrub: !0,
+          scrub: this.isMobile ? false : true,
           once: !0,
         },
       });
